@@ -40,12 +40,28 @@ En este ejercicio se va a construír un modelo de clases para la capa lógica de
        		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        		xmlns:context="http://www.springframework.org/schema/context"
        		xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.2.xsd
-        	http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.2.xsd">
+        		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.2.xsd">
     			<context:component-scan base-package="edu.eci.arsw" />	
 	</beans>
 	```
 	
 	* Configurar la aplicación -mediante anotaciones- para que el esquema de persistencia sea inyectado al momento de ser creado el bean 'BlueprintServices'.
+
+	        Se configure
+	
+		```java
+		@Service
+		public class BlueprintsServices {
+   
+    			@Autowired
+    			@Qualifier("InMemoryBlueprintPersistence")
+    			BlueprintsPersistence bpp=null;
+
+    			@Autowired
+    			@Qualifier("RedundancyFilter")
+    			BlueprintsFilter bpf;
+		```
+	
 
 
 2. Complete los operaciones getBluePrint() y getBlueprintsByAuthor(). Implemente todo lo requerido de las capas inferiores (por ahora, el esquema de persistencia disponible 'InMemoryBlueprintPersistence') agregando las pruebas correspondientes en 'InMemoryPersistenceTest'.
