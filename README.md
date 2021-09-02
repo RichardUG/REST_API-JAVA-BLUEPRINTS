@@ -20,7 +20,7 @@ En este ejercicio se va a construír un modelo de clases para la capa lógica de
 	* Agregar las dependencias de Spring.
 	
 	``` xml
-	<dependency>
+	    <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-core</artifactId>
             <version>5.3.9</version>
@@ -33,6 +33,18 @@ En este ejercicio se va a construír un modelo de clases para la capa lógica de
 	```
 	
 	* Agregar la configuración de Spring.
+	
+	``` xml
+	<?xml version="1.0" encoding="UTF-8"?>
+	<beans xmlns="http://www.springframework.org/schema/beans"
+       		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       		xmlns:context="http://www.springframework.org/schema/context"
+       		xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.2.xsd
+        	http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.2.xsd">
+    			<context:component-scan base-package="edu.eci.arsw" />	
+	</beans>
+	```
+	
 	* Configurar la aplicación -mediante anotaciones- para que el esquema de persistencia sea inyectado al momento de ser creado el bean 'BlueprintServices'.
 
 
