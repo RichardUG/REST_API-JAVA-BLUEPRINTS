@@ -46,9 +46,30 @@ En este ejercicio se va a construír un modelo de clases para la capa lógica de
 	```
 	
 	* Configurar la aplicación -mediante anotaciones- para que el esquema de persistencia sea inyectado al momento de ser creado el bean 'BlueprintServices'.
-
-	        Se configure
 	
+	> Se configuran la anotación de la clase ```RedundancyFilter``` como servicio
+	
+		```java
+		@Service("RedundancyFilter")
+		public class RedundancyFilter implements BlueprintsFilter {
+		```
+		
+	> Se configuran la anotación de la clase ```SubsamplingFilter``` como servicio
+		
+		```java
+		@Service("SubsamplingFilter")
+		public class SubsamplingFilter implements BlueprintsFilter {
+		```
+		
+	> Se configuran la anotación de la clase ```InMemoryBlueprintPersistence``` como servicio
+		
+		```java
+		@Service("InMemoryBlueprintPersistence")
+		public class InMemoryBlueprintPersistence implements BlueprintsPersistence{
+		```
+		
+	> Se configuran la anotación de la clase ```BlueprintsServices``` como servicio y se invocan los servicios de ```InMemoryBlueprintPersistence``` y ```RedundancyFilter```
+		
 		```java
 		@Service
 		public class BlueprintsServices {
