@@ -1,4 +1,4 @@
-### Escuela Colombiana de Ingeniería
+﻿### Escuela Colombiana de Ingeniería
 
 ### Arquitecturas de Software
 ## Laboratorio Componentes y conectores  Middleware- gestión de planos
@@ -332,3 +332,11 @@ En este ejercicio se va a construír un modelo de clases para la capa lógica de
 		}
 		```
 	
+### Autores
+* [Ana Maria Salazar Bohorquez](https://github.com/anamariasalazar)
+* [Richard Santiago Urrea Garcia](https://github.com/RichardUG)
+
+### Licencia & Derechos de Autor
+**©️** Ana Maria Salazar Bohorquez && Richard Santiago Urrea Garcia, Estudiantes de Ingeniería de Sistemas de la Escuela Colombiana de Ingeniería Julio Garavito
+
+Licencia bajo la [GNU General Public License](/LICENSE.txt)

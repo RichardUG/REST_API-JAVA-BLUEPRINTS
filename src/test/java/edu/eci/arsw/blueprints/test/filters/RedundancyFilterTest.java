@@ -1,4 +1,4 @@
-package edu.eci.arsw.blueprints.test.persistence.impl;
+package edu.eci.arsw.blueprints.test.filters;
 
 import edu.eci.arsw.blueprints.filters.RedundancyFilter;
 import edu.eci.arsw.blueprints.model.Blueprint;
